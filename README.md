@@ -1,2 +1,2 @@
-# Fall-2015
-Just my codes for class. Nothing interesting.
+# READ ME
+Just codes for ECEN 424 class. Nothing interesting.
