@@ -37,7 +37,7 @@ public class Calculator {
     		//Quit program if user input Q or q:
 		public String quit(String str){
 			if((str.equals("q")) || (str.equals("Q"))){
-				System.out.println("\n Exiting Calculator...");;
+				System.out.println("\n Exiting Calculator...\n");;
 				System.exit(0);
 				return str;
         	        }
