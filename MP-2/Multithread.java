@@ -6,6 +6,12 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.FutureTask;
 import java.util.concurrent.RunnableFuture;
 
+/*
+ Created by Group 23.
+ Due 10/1/15
+ This program multiples two matrices using Multiple threading.
+*/
+
 public class Multithread {
     
 //All variables below are outside and static so they can be seen by the threads
