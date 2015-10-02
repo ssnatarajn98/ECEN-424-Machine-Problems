@@ -15,11 +15,13 @@ import java.util.concurrent.RunnableFuture;
 public class Multithread {
     
 //All variables below are outside and static so they can be seen by the threads
+    //Initiate size of array:
     static  int n = 20;
     
+    //Initiate Matrices:
     static int [][] Mat1 = new int[n][n]; //Matrix 1
     static int [][] Mat2 = new int[n][n]; //Matrix 2
-    static int [][] Mat3 = new int[n][n]; //Result of Test matrix
+    static int [][] Mat3 = new int[n][n]; //Result of the product of Matrix 1 and 2
     
     //Break up Matrix 1 into 5 components:
     static int [][] Mat1A = new int[n][n];
@@ -27,8 +29,6 @@ public class Multithread {
     static int [][] Mat1C = new int[n][n];
     static int [][] Mat1D = new int[n][n];
     static int [][] Mat1E = new int[n][n];
-    
-    public static int testing = 300;    //Testing for data transfer
 
 //Starting main:
     public static void main(String[] args) throws InterruptedException {
@@ -40,13 +40,6 @@ public class Multithread {
               So, the matrices will created as a single thread and then broken up
               into 5 threads each. */
         Random Rand1 = new Random();
-        
-        //Threads:
-        MyThread T1 = new MyThread();
-        MyThread T2 = new MyThread();
-        MyThread T3 = new MyThread();
-        MyThread T4 = new MyThread();
-        MyThread T5 = new MyThread();
         
         //Runnables:
         Thread R1 = new Thread(new MyRunnable());
@@ -149,7 +142,6 @@ public class Multithread {
                     Mat3[i][j] = Mat3[i][j] + (Mat1[i][k]*Mat2[k][j]);
                 }
                 System.out.print(Mat3[i][j] + " ");
-                testing = 30;
             }
             System.out.print("|" + "Rows: " + (i+1) + "\n");
         }
@@ -157,11 +149,11 @@ public class Multithread {
         /**Here we are going to use runnables. We are starting the thread and then
                joining the values into the matrix.
            Basically the order is Start R1 -> Join values. Start R2 -> Join Values if it's R1.start() then R1.join(); etc */
-        R1.start(); //Thread-5
-        R2.start(); //Thread-6
-        R3.start(); //Thread-7
-        R4.start(); //Thread-8
-        R5.start(); //Thread-9
+        R1.start(); //Thread-0
+        R2.start(); //Thread-1
+        R3.start(); //Thread-2
+        R4.start(); //Thread-3
+        R5.start(); //Thread-4
         R1.join();
         R2.join();
         R3.join();
@@ -213,7 +205,7 @@ public class Multithread {
             //Same concept as before. Now each thread does only a chunk of the overall calculation and the afterwards it's all joined together into one big matrix and output
 
             //Thread R1
-           if (Checker.equals("Thread-5")) {
+           if (Checker.equals("Thread-0")) {
                 for (int i = 0; i < 4; i++) {
                     for (int j = 0; j < n; j++) {
                         for (int k = 0; k < n; k++) {
@@ -224,7 +216,7 @@ public class Multithread {
             }
             
             //Thread R2
-            else if (Checker.equals("Thread-6")) {
+            else if (Checker.equals("Thread-1")) {
                 for (int i = 4; i < 8; i++) {
                     for (int j = 0; j < n; j++) {
                         for (int k = 0; k < n; k++) {
@@ -235,7 +227,7 @@ public class Multithread {
             }
             
             //Thread R3
-            else if (Checker.equals("Thread-7")) {
+            else if (Checker.equals("Thread-2")) {
                 for (int i = 8; i < 12; i++) {
                     for (int j = 0; j < n; j++) {
                         for (int k = 0; k < n; k++) {
@@ -246,7 +238,7 @@ public class Multithread {
             }
             
             //Thread R4
-            else if (Checker.equals("Thread-8")) {
+            else if (Checker.equals("Thread-3")) {
                 for (int i = 12; i < 16; i++) {
                     for (int j = 0; j < n; j++) {
                         for (int k = 0; k < n; k++) {
@@ -257,7 +249,7 @@ public class Multithread {
             }
             
             //Thread R5
-            else if (Checker.equals("Thread-9")) {
+            else if (Checker.equals("Thread-4")) {
                 for (int i = 16; i < 20; i++) {
                     for (int j = 0; j < n; j++) {
                         for (int k = 0; k < n; k++) {
