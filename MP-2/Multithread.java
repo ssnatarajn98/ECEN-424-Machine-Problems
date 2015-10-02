@@ -135,7 +135,7 @@ public class Multithread {
         //Create Matrix 3 (Product of Matrix 1 & 2):
         System.out.println("");
         System.out.println("Matrix 1 * Matrix 2 (Single-Threaded) Result:");
-        System.out.println("_________________________________________");
+        System.out.println("_____________________________________________________________");
         for (int i = 0;  i < n ; i++){
             for (int j = 0; j < n; j++) {
                 for (int k = 0; k < n; k++) {
@@ -167,7 +167,7 @@ public class Multithread {
         //Then we join them all together and then output. This set of for loops is simply outputting the results and it is not actually computing
         System.out.println("");
         System.out.println("Matrix 1 * Matrix 2 (Multi-threaded Matrix) Result: ");
-        System.out.println("_________________________________________");
+        System.out.println("_____________________________________________________________");
         for (int i = 0;  i < n ; i++){
             for (int j = 0; j < n; j++) {
                 System.out.print(PHMat[i][j] + " ");
