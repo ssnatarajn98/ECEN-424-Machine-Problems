@@ -56,7 +56,7 @@ public class Multithread {
                 Mat1[i][j] = Rand1.nextInt(4);   //Assigns NxN matrix with random values in the range 0 to (X-1) using Rand1.nextInt(X);
                 System.out.print(Mat1[i][j] + " "); //Prints matrix to check for randomness of #s
             }
-            System.out.print("|" + "Row: " + (i + 1)+ "\n"); //Formats the matrix to print nicely
+            System.out.print(/*"|" + "Row: " + (i + 1)+*/ "\n"); //Formats the matrix to print nicely
         }
  
         //Create Matrix 2:
@@ -68,7 +68,7 @@ public class Multithread {
                 Mat2[i][j] = Rand1.nextInt(4);
                 System.out.print(Mat2[i][j] + " ");
             }
-            System.out.print("|" + "Row: "  + (i + 1) + "\n");
+            System.out.print(/*"|" + "Row: "  + (i + 1) + */"\n");
         }
         
 //Break matrices into their parts:
