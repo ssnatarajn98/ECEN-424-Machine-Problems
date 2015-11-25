@@ -53,10 +53,10 @@ public class Multithread {
         System.out.println("_________________________________________");
         for (int i = 0;  i < n ; i++) {                 //Controls the # of rows
             for (int j = 0; j < n; j++) {               //Controls the # of columns
-                Mat1[i][j] = Rand1.nextInt(4);   //Assigns NxN matrix with random values in the range 0 to (X-1) using Rand1.nextInt(X);
+                Mat1[i][j] = Rand1.nextInt(10);   //Assigns NxN matrix with random values in the range 0 to (X-1) using Rand1.nextInt(X);
                 System.out.print(Mat1[i][j] + " "); //Prints matrix to check for randomness of #s
             }
-            System.out.print(/*"|" + "Row: " + (i + 1)+*/ "\n"); //Formats the matrix to print nicely
+            System.out.print("|" + "Row: " + (i + 1)+ "\n"); //Formats the matrix to print nicely
         }
  
         //Create Matrix 2:
@@ -65,10 +65,10 @@ public class Multithread {
         System.out.println("_________________________________________");
         for (int i = 0;  i < n ; i++){
             for (int j = 0; j < n; j++) {
-                Mat2[i][j] = Rand1.nextInt(4);
+                Mat2[i][j] = Rand1.nextInt(10);
                 System.out.print(Mat2[i][j] + " ");
             }
-            System.out.print(/*"|" + "Row: "  + (i + 1) + */"\n");
+            System.out.print("|" + "Row: "  + (i + 1) + "\n");
         }
         
 //Break matrices into their parts:
@@ -81,7 +81,7 @@ public class Multithread {
                 Mat1A[i][j] = Mat1[i][j];
                 System.out.print(Mat1A[i][j] + " ");
             }
-            System.out.print("|" + "\n");
+            System.out.print("|" + "Row: " + (i+1) + "\n");
         }
         
         //1B:
@@ -93,7 +93,7 @@ public class Multithread {
                 Mat1B[i][j] = Mat1[i][j];
                 System.out.print(Mat1B[i][j] + " ");
             }
-            System.out.print("|" + "\n");
+            System.out.print("|" + "Row: "  + (i + 1) + "\n");
         }
         
         //1C:
@@ -105,7 +105,7 @@ public class Multithread {
                 Mat1C[i][j] = Mat1[i][j];
                 System.out.print(Mat1C[i][j] + " ");
             }
-            System.out.print("|" + "\n");
+            System.out.print("|" + "Row: "  + (i + 1) + "\n");
         }
         
         //1D:
@@ -117,7 +117,7 @@ public class Multithread {
                 Mat1D[i][j] = Mat1[i][j];
                 System.out.print(Mat1D[i][j] + " ");
             }
-            System.out.print("|" + "\n");
+            System.out.print("|" + "Row: "  + (i + 1) + "\n");
         }
         
         //1E:
@@ -129,7 +129,7 @@ public class Multithread {
                 Mat1E[i][j] = Mat1[i][j];
                 System.out.print(Mat1E[i][j] + " ");
             }
-            System.out.print("|" + "\n");
+            System.out.print("|" + "Row: "  + (i + 1) + "\n");
         }
         
         //Create Matrix 3 (Product of Matrix 1 & 2):
